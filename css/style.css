@@ -23,6 +23,10 @@ img {
     background-color: var(--background-page);
 }
 
+.hidden {
+    display: none;
+}
+
 .page-body {
 	margin: 0;
 	padding: 0;
@@ -43,6 +47,7 @@ img {
     height: 98px;
     background-color: rgba(0,0,0,0.64);
     padding: 0 95px 55px 95px; 
+    position: relative;
 }
 
 .main-navigation-wr {
@@ -52,22 +57,16 @@ img {
     align-items: center;
     margin: 0 auto;
     margin-top: 21px;
-/* outline: 5px solid green;
-    outline-offset: -5px; */
 }
 
 .main-navigation {
     display: flex;
-    /* outline: 5px solid rgb(3, 152, 175);
-    outline-offset: -5px; */
 }
 
 .header-logo {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    /* outline: 5px solid rgb(199, 12, 161);
-    outline-offset: -5px; */
     width: 149px;
     margin-left: 5px;
 }
@@ -91,8 +90,6 @@ img {
     margin: 0 0 0 75px;
 	padding: 0;
     list-style: none;
-    /* outline: 5px solid rgb(192, 179, 8);
-    outline-offset: -5px; */
 }
 
 .city-name {
@@ -104,8 +101,6 @@ img {
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    /* outline: 5px solid rgb(234, 55, 39);
-    outline-offset: -5px; */
 }
 
 .login::before {
@@ -128,14 +123,20 @@ img {
 
 .button--grey {
     background-color: var(--background-button);
-    margin-right: 30px;
+    margin-right: 30px; 
 }
+
+.button--tomato:before {
+    content: "Стать клиентом";
+}
+
+.button--grey:before {
+    content: "Бесплатная консультация";
+  }
 
 .about {
     height: 802px;
     padding: 0 95px;
-    /* outline: 5px solid rgb(33, 138, 9);
-    outline-offset: -5px; */
     background-color: rgba(0,0,0,0.64);
     position: relative;
 }
@@ -184,11 +185,15 @@ img {
     color: var(--basic-tomato);
 }
 
+.advantages-offer-wr {
+    display: flex;
+    flex-direction: column;
+}
+
 .advantages {
     min-height: 715px;
-    /* outline: 5px solid rgb(6, 11, 89);
-    outline-offset: -5px; */
     background-color: var(--background);
+    order: 1;
 }
 
 .advantages-list {
@@ -196,7 +201,6 @@ img {
     grid-template-columns: repeat(auto-fit, minmax(330px, auto));
     gap: 30px;
     margin: 0;
-	padding: 0;
     list-style: none;
     padding: 58px 95px 57px 95px;
     justify-content: center;
@@ -205,7 +209,6 @@ img {
 .advantage-item {
     width: 330px;
     height: 600px;
-    background-color: #DA2F37;
     border: 1px solid var(--basic-tomato);
     border-radius: 9px;
     position: relative;
@@ -256,13 +259,12 @@ img {
 
 .offer {
     height: 715px;
-    /* outline: 5px solid rgb(72, 190, 13);
-    outline-offset: -5px; */
     background-image: url(/img/gym_img.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
     z-index: 2;
+    order: 2;
 }
 
 .offer-wr {
@@ -288,8 +290,6 @@ img {
 
 .rates {
     min-height: 715px;
-    /* outline: 5px solid rgb(9, 111, 136);
-    outline-offset: -5px; */
     background-color: var(--background);
     position: relative;
 }
@@ -359,6 +359,14 @@ img {
     bottom: 0;
 }
 
+.rates-item button::before {
+    content: "Узнать стоимость";
+}
+
+.rates-item:last-child button:before {
+    content: "Записаться";
+}
+
 .rates-item:last-child p {
     margin-left: 50px;
 }
@@ -387,8 +395,6 @@ img {
 
 .page-footer {
     background-color: var(--background);
-    /* outline: 5px solid rgb(54, 181, 42);
-    outline-offset: -5px; */
     position: relative;
 } 
 
@@ -523,3 +529,332 @@ img {
     z-index: 1;
     clip-path: polygon(106px 0, 100% 0, 100% 100%, 106px 100%);
 }
+
+.header-toggler {
+    position: absolute;
+    width: 28.14px;
+    height: 23.81px;
+    top: 35.72px;
+    right: 32.11px;
+}
+
+/* Мобильные устройства */
+@media (max-width: 562px) {
+    .page-body {
+        max-width: 562px;
+    }  
+
+    .button {
+        border-radius: 14.5px;
+    }
+
+    .text-tomato--mob {
+        color: var(--basic-tomato);
+    }
+
+    .main-header {
+        padding: 0 28.86px 20px; 
+        height: 96px;
+        position: sticky;
+        left: 0;
+        right: 0;
+        top: 0;
+        background: none;
+        transition: background-color, box-shadow 0.25s ease;
+        z-index: 5;      
+    }
+
+    .hidden {
+        display: block;
+    }
+
+    .main-navigation-wr {
+        display: flex;
+        justify-content: start;
+        margin-top: 30px;
+    }
+
+    .site-navigation, .login-wr {
+        display: none;
+    } 
+
+    .header-logo {
+        width: 87.53px;
+        margin-left: 0;
+    }
+
+    .header-logo-title {
+        font-size: 20.2px;
+        font-weight: 900;
+        line-height: 88.9%;
+        margin-left: 9.5px;
+    }
+
+    .header-logo img {
+        width: 31.75px;
+        height: 28.86;
+    }
+
+    .header-logo img {
+        margin-left: 0;
+    }
+
+    .about {
+        height: 1122px;
+        padding: 0 28.86px; 
+        background-image: url(/img/mob-iPhone\ 14\ -\ 7.svg);
+        background-position-y: -90px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        clip-path: polygon(0 0, 100% 0, 100% 1122px, 0 1122px);
+    }
+
+    .about-description {
+        display: flex;
+        height: 100%;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .about-description p {
+        display: none;
+    }
+
+    .about h1 {
+        font-size: 46.18px;
+    }
+    .about-buttons-wr {
+        display: flex;
+        flex-direction: column;
+        gap: 14.07px;
+        margin-bottom: 50px;
+    }
+
+    .about-buttons-wr button {
+        width: 100%;
+        height: 87px;
+    }
+
+    .button--tomato:before {
+        content: "Войти";
+        font-size: 28.86px;
+    }
+
+    .button--grey {
+        margin-right: 0;
+        order: 1;
+    } 
+
+    .button--grey:before {
+        content: "Зарегистрироваться";
+        font-size: 28.86px;
+      }
+
+    .about-img, .about-ellipse--top, .about-ellipse--bottom {
+        display: none;
+    }
+
+    .offer {
+        height: 230.9px;
+        order: 1;
+        margin: 28.86px 0;
+        padding: 0 28.86px 15.87px;
+        background-image: none;
+    }
+
+    .offer-wr {
+        display: flex;
+        flex-direction: column;
+        padding: 0 21.15px 0 17.3px;
+        align-items: flex-start;
+        background-image: url(/img/gym_img.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 15px;
+        border: 1.44px solid var(--basic-tomato);
+    }
+
+    .offer-wr h1 {
+        font-size: 28.86px;
+        margin: 24.53px 0 28.86px 0;
+    }
+
+    .offer-wr p {
+        font-size: 14.43px;
+        margin: 0;
+    }
+
+    .offer-flexWr {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 15.8px;
+    }
+
+    .offer-flexWr button {
+        font-size: 14.43px;
+        margin: 0;
+    }
+
+    .advantages {
+        height: auto;
+        order: 2;
+        margin-bottom: 75px;
+    }
+
+    .advantages-list {
+        grid-template-columns: repeat(auto-fit, minmax(237px, auto));
+        gap: 28.86px;
+        padding: 0 28.86px;
+    }
+
+    .advantage-item {
+        width: 238px;
+        height: 346.35px;
+        border-radius: 15px;
+        background-size: contain;
+        border: 1.44px solid var(--basic-tomato);
+    }
+
+    .advantage-item h2 {
+        font-size: 23px;
+        margin: 0 auto 0 19.7px;
+        bottom: 63.5px;
+    }
+
+    .advantage-more {
+        height: 43.29px;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        border-radius: 15px;
+    }
+    
+    .advantage-more a{
+        font-size: 14.43;
+    }
+
+    .advantage-item__img1 {
+        background-image: url(/img/mob-advantages_img1.png);
+    }
+    
+    .advantage-item__img2 {
+        background-image: url(/img/mob-advantages_img2.png);
+    }
+    
+    .advantage-item__img3 {
+        background-image: url(/img/mob-advantages_img3.png);
+    }
+    
+    .advantage-item__img4 {
+        background-image: url(/img/mob-advantages_img4.png);
+    }
+
+    .rates-ellipse--top, .rates-ellipse--bottom-right, .rates-ellipse--top-right {
+        display: none;
+    } 
+
+    .rates {
+        min-height: 785px;
+    }
+
+    .rates-wr {
+        padding: 0 28.86px;
+    }
+
+    .rates-wr h1 {
+        font-size: 28.86px;
+        text-align: center;
+    }
+
+    .rates-wr p {
+        font-size: 23px;
+        margin: 14.43px 0;
+        opacity: 0.5;
+    }
+
+    .rates-list {
+        grid-template-columns: repeat(auto-fit, minmax(237px, auto));
+        gap: 28.86px;
+        padding: 0 28.86px;
+    }
+    
+    .rates-item {
+        width: 237px;
+        height: 317px;
+        border-radius: 15px;
+        border: 1.44px solid var(--basic-tomato)
+    }
+    
+    .rates-item h3 {
+        font-size: 23px;
+        line-height: 28.9px;
+        margin: 10px 0 17px 0;
+    }
+
+    .rates-item:last-child h3 {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .rates-item p {
+        top: 85.14px;
+        font-size: 14.43px;
+        line-height: 24.2px;
+        margin: 0;
+        padding: 0 15.87px 0 18.76px;
+    }
+
+    .rates-item button {
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        height: 43.29;
+        font-weight: 400;
+        padding: 12.65px 0;
+    }
+
+    .rates-item button::before {
+        content: "Подробнее";
+        font-size: 14.43px;
+    }
+
+    .rates-item:last-child p {
+        margin-left: 0;
+        padding-left: 27.42px;
+    }
+
+    .checkbox, .button-submit, .phone-number, .footer-ellipse {
+        display: none;
+    }
+
+    .form-container {
+        padding: 30.3px 28.8px 0;
+        min-height: 260px;
+    }
+
+    .form-container h2 {
+        font-size: 23.09px;
+        line-height: 130%;
+        margin-bottom: 17px;
+    } 
+
+    .input-wr {
+        gap: 14.32px;
+        margin-bottom: 34px;
+        align-items: stretch;
+    }
+
+    .input-wr input {
+        height: 69.2px;
+        padding: 0 47.6px;
+        border-radius: 72px;
+    }
+
+    .input-wr input::placeholder {
+        font-size: 25.98px;
+        color: var(--basic-tomato);
+    }
+
+}  
