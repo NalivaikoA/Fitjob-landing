@@ -540,6 +540,11 @@ img {
 
 /* Мобильные устройства */
 @media (max-width: 562px) {
+    :root {
+        --background-page: #000000;
+        --background: black;
+    } 
+
     .page-body {
         max-width: 562px;
     }  
