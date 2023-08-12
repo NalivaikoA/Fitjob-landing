@@ -217,19 +217,19 @@ img {
 }
 
 .advantage-item__img1 {
-    background-image: url(/img/advantages_img1.png);
+    background-image: url(../img/advantages_img1.png);
 }
 
 .advantage-item__img2 {
-    background-image: url(/img/advantages_img2.png);
+    background-image: url(../img/advantages_img2.png);
 }
 
 .advantage-item__img3 {
-    background-image: url(/img/advantages_img3.png);
+    background-image: url(../img/advantages_img3.png);
 }
 
 .advantage-item__img4 {
-    background-image: url(/img/advantages_img4.png);
+    background-image: url(../img/advantages_img4.png);
 }
 
 
@@ -259,7 +259,7 @@ img {
 
 .offer {
     height: 715px;
-    background-image: url(/img/gym_img.jpg);
+    background-image: url(../img/gym_img.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
@@ -602,7 +602,7 @@ img {
     .about {
         height: 1122px;
         padding: 0 28.86px; 
-        background-image: url(/img/mob-iPhone\ 14\ -\ 7.svg);
+        background-image: url(../img/mob-iPhone\ 14\ -\ 7.svg);
         background-position-y: -90px;
         background-size: cover;
         background-repeat: no-repeat;
@@ -667,7 +667,7 @@ img {
         flex-direction: column;
         padding: 0 21.15px 0 17.3px;
         align-items: flex-start;
-        background-image: url(/img/gym_img.jpg);
+        background-image: url(../img/gym_img.jpg);
         background-repeat: no-repeat;
         background-size: cover;
         border-radius: 15px;
@@ -736,19 +736,19 @@ img {
     }
 
     .advantage-item__img1 {
-        background-image: url(/img/mob-advantages_img1.png);
+        background-image: url(../img/mob-advantages_img1.png);
     }
     
     .advantage-item__img2 {
-        background-image: url(/img/mob-advantages_img2.png);
+        background-image: url(../img/mob-advantages_img2.png);
     }
     
     .advantage-item__img3 {
-        background-image: url(/img/mob-advantages_img3.png);
+        background-image: url(../img/mob-advantages_img3.png);
     }
     
     .advantage-item__img4 {
-        background-image: url(/img/mob-advantages_img4.png);
+        background-image: url(../img/mob-advantages_img4.png);
     }
 
     .rates-ellipse--top, .rates-ellipse--bottom-right, .rates-ellipse--top-right {
