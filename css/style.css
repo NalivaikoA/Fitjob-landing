@@ -530,21 +530,8 @@ img {
     clip-path: polygon(106px 0, 100% 0, 100% 100%, 106px 100%);
 }
 
-.header-toggler {
-    position: absolute;
-    width: 28.14px;
-    height: 23.81px;
-    top: 35.72px;
-    right: 32.11px;
-}
-
 /* Мобильные устройства */
 @media (max-width: 562px) {
-    :root {
-        --background-page: #000000;
-        --background: black;
-    } 
-
     .page-body {
         max-width: 562px;
     }  
@@ -558,7 +545,7 @@ img {
     }
 
     .main-header {
-        padding: 0 28.86px 20px; 
+        padding: 0 28.86px 20px 28.86px; 
         height: 96px;
         position: sticky;
         left: 0;
@@ -567,6 +554,14 @@ img {
         background: none;
         transition: background-color, box-shadow 0.25s ease;
         z-index: 5;      
+    }
+
+        .header-toggler {
+        position: absolute;
+        width: 28.14px;
+        height: 23.81px;
+        top: 35.72px;
+        right: 32.11px;
     }
 
     .hidden {
@@ -853,6 +848,7 @@ img {
 
     .input-wr input {
         height: 69.2px;
+        width: 72vw;
         padding: 0 47.6px;
         border-radius: 72px;
     }
