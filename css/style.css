@@ -540,13 +540,10 @@ img {
 
 /* Мобильные устройства */
 @media (max-width: 566px) {
-    :root {
-        --background-page: #0B0B0B;
-        --background: #0B0B0B;
-    } 
 
     .page-body {
         max-width: 562px;
+        background-color: var(--background-page);
     }  
 
     .button {
@@ -762,6 +759,7 @@ img {
 
     .rates {
         min-height: 785px;
+        background-color: var(--background-page);
     }
 
     .rates-wr {
