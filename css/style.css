@@ -538,8 +538,13 @@ img {
     right: 32.11px;
 }
 
+
 /* Мобильные устройства */
-@media (max-width: 566px) {
+@media (max-width: 563px) {
+
+    .page {
+        font-size: 20px;
+    }
 
     .page-body {
         max-width: 562px;
@@ -556,7 +561,7 @@ img {
 
     .main-header {
         padding: 0 28.86px 20px; 
-        height: 96px;
+        height: 7.8817vh;
         position: sticky;
         left: 0;
         right: 0;
@@ -602,20 +607,19 @@ img {
     }
 
     .about {
-        height: 1122px;
+        height: 90.4vh;
         padding: 0 28.86px; 
-        background-image: url(../img/mob-iPhone\ 14\ -\ 7.svg);
-        background-position-y: -90px;
-        background-size: cover;
+        background-image: url(../img/mob-iPhone\ 14\ -\ 71crop1102.png);
+        background-size: 100vw auto;
         background-repeat: no-repeat;
-        clip-path: polygon(0 0, 100% 0, 100% 1122px, 0 1122px);
-    }
+}
 
     .about-description {
         display: flex;
         height: 100%;
         flex-direction: column;
         justify-content: space-between;
+        position: relative;
     }
 
     .about-description p {
@@ -623,8 +627,9 @@ img {
     }
 
     .about h1 {
-        font-size: 46.18px;
+        font-size: 8.21vw;
     }
+
     .about-buttons-wr {
         display: flex;
         flex-direction: column;
@@ -633,13 +638,15 @@ img {
     }
 
     .about-buttons-wr button {
-        width: 100%;
-        height: 87px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 7.142vh;
     }
 
     .button--tomato:before {
         content: "Войти";
-        font-size: 28.86px;
+        font-size: 5.13vw;
     }
 
     .button--grey {
@@ -649,7 +656,7 @@ img {
 
     .button--grey:before {
         content: "Зарегистрироваться";
-        font-size: 28.86px;
+        font-size: 5.13vw;
       }
 
     .about-img, .about-ellipse--top, .about-ellipse--bottom {
@@ -657,7 +664,7 @@ img {
     }
 
     .offer {
-        height: 230.9px;
+        height: 18.957vh;
         order: 1;
         margin: 28.86px 0;
         padding: 0 28.86px 15.87px;
@@ -667,7 +674,7 @@ img {
     .offer-wr {
         display: flex;
         flex-direction: column;
-        padding: 0 21.15px 0 17.3px;
+        padding: 0 3.078vw 0 3.763vw;
         align-items: flex-start;
         background-image: url(../img/gym_img.jpg);
         background-repeat: no-repeat;
@@ -677,12 +684,12 @@ img {
     }
 
     .offer-wr h1 {
-        font-size: 28.86px;
+        font-size: 5.135vw;
         margin: 24.53px 0 28.86px 0;
     }
 
     .offer-wr p {
-        font-size: 14.43px;
+        font-size: 2.567vw;
         margin: 0;
     }
 
@@ -695,38 +702,45 @@ img {
     }
 
     .offer-flexWr button {
-        font-size: 14.43px;
+        font-size: 2.567vw;
         margin: 0;
+        padding: 1.477vh 5.693vw;
     }
 
     .advantages {
-        height: auto;
+        min-height: auto;
         order: 2;
         margin-bottom: 75px;
     }
 
     .advantages-list {
-        grid-template-columns: repeat(auto-fit, minmax(237px, auto));
-        gap: 28.86px;
+        /* grid-template-columns: repeat(auto-fit, minmax(calc((100vw - ((28.86px * 2) + 5.135vw)) / 2.01), auto));
+        gap: 5.135vw; */
         padding: 0 28.86px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 4.5vw;
+        justify-content: space-between;
+        align-items: center;
     }
 
     .advantage-item {
-        width: 238px;
-        height: 346.35px;
+        width: calc((100vw - ((28.86px * 2) + 5.135vw)) / 2.01);
+        height: 28.435vh;
         border-radius: 15px;
         background-size: contain;
         border: 1.44px solid var(--basic-tomato);
+        /* margin-bottom: 28.86px; */
     }
 
     .advantage-item h2 {
-        font-size: 23px;
-        margin: 0 auto 0 19.7px;
-        bottom: 63.5px;
+        font-size: 1.888vh;
+        margin: 0 auto 0 3.5vw;
+        bottom: 5vh;
     }
 
     .advantage-more {
-        height: 43.29px;
+        height: 3.43vh;
         position: absolute;
         bottom: 0;
         width: 100%;
@@ -734,7 +748,7 @@ img {
     }
     
     .advantage-more a{
-        font-size: 14.43;
+        font-size: 14.43px;
     }
 
     .advantage-item__img1 {
