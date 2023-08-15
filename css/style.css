@@ -735,13 +735,13 @@ img {
         background-position: center;
         border: 1.44px solid var(--basic-tomato);
         display: flex;
-        justify-content: center;
+        justify-content: start;
         margin-bottom: 5.135vw;
     }
 
     .advantage-item h2 {
         font-size: 1.888vh;
-        margin: 0 auto 0 auto;
+        margin: 0 auto 0 3.558vw;
         bottom: 5vh;
     }
 
